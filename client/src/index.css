@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
+@import "tailwindcss";
+
+/* Palette. Change a color here and the whole app follows. */
+@theme {
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f7f9fc;       /* page background */
+  --color-surface: #ffffff;     /* cards, navbar, forms */
+  --color-line: #e3e8ef;        /* card and input outlines */
+  --color-ink: #0f1b2d;         /* headings, body text */
+  --color-muted: #5b6b82;       /* company names, locations, dates */
+
+  --color-brand: #2457d6;       /* primary: buttons, links, active nav */
+  --color-brand-dark: #1c46b0;  /* primary hover */
+  --color-brand-tint: #e8effe;  /* skill chips, selected filters */
+
+  --color-success: #12805c;     /* shortlisted, hired, open */
+  --color-warning: #b45309;     /* in review, needs attention */
+  --color-danger: #c62828;      /* rejected, delete */
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply tracking-tight;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
+
+/* Shared building blocks. Buttons take two classes, e.g. "btn btn-primary". */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-brand text-white hover:bg-brand-dark;
+  }
+  .btn-secondary {
+    @apply border border-line bg-surface text-ink hover:border-ink;
+  }
+  .btn-danger {
+    @apply border border-danger/40 bg-surface text-danger hover:bg-danger hover:text-white;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+  .field {
+    @apply w-full rounded-md border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-muted/70 focus:border-brand;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium;
+  }
+  .link {
+    @apply text-brand underline underline-offset-2 hover:text-brand-dark;
+  }
+  /* Chips. The base is the primary tint; add a modifier for other meanings. */
+  .chip {
+    @apply inline-flex items-center rounded-full border border-transparent bg-brand-tint px-2.5 py-0.5 text-xs font-medium text-brand-dark;
+  }
+  .chip-success {
+    @apply border-success/30 bg-success/5 text-success;
+  }
+  .chip-muted {
+    @apply border-line bg-paper text-muted;
+  }
+  .page {
+    @apply mx-auto w-full max-w-5xl px-5 py-10;
+  }
+}

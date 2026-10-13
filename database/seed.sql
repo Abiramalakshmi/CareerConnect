@@ -1,0 +1,77 @@
+
+INSERT INTO public.jobs (
+    recruiter_id,
+    title,
+    company,
+    description,
+    requirements,
+    location,
+    job_type,
+    work_mode,
+    experience_level,
+    salary_min,
+    salary_max,
+    status,
+    deadline
+)
+VALUES
+(
+    '167bf459-8b5b-4e45-b5b3-8a299b6913a6',
+    'Frontend Developer Intern',
+    'TechNova',
+    'Build responsive user interfaces and collaborate with our product team.',
+    'Basic knowledge of HTML, CSS, JavaScript, and React.',
+    'Chennai, India',
+    'internship',
+    'hybrid',
+    'fresher',
+    10000,
+    15000,
+    'open',
+    '2026-12-31'
+),
+(
+    '167bf459-8b5b-4e45-b5b3-8a299b6913a6',
+    'Java Backend Developer',
+    'CloudBridge Solutions',
+    'Develop and maintain REST APIs and backend services.',
+    'Java, Spring Boot, SQL, and basic understanding of REST APIs.',
+    'Bengaluru, India',
+    'full-time',
+    'on-site',
+    'entry-level',
+    400000,
+    700000,
+    'open',
+    '2026-11-30'
+),
+(
+    '167bf459-8b5b-4e45-b5b3-8a299b6913a6',
+    'Data Analyst Intern',
+    'InsightWorks',
+    'Assist with data cleaning, reporting, and dashboard development.',
+    'SQL, Excel, and basic data visualization skills.',
+    'Remote',
+    'internship',
+    'remote',
+    'fresher',
+    12000,
+    18000,
+    'open',
+    '2026-12-15'
+),
+(
+    '167bf459-8b5b-4e45-b5b3-8a299b6913a6',
+    'Full Stack Developer',
+    'CareerStack',
+    'Build and maintain frontend and backend features for our hiring platform.',
+    'React, Node.js, Express, SQL, and Git.',
+    'Chennai, India',
+    'full-time',
+    'hybrid',
+    'entry-level',
+    500000,
+    900000,
+    'open',
+    '2026-12-20'
+);
